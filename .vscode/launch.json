@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API (.NET)",
+      "type": "dotnet",
+      "request": "launch",
+      "projectPath": "${workspaceFolder}/src/Fido2CustomAuth.Api/Fido2CustomAuth.Api.csproj"
+    },
+    {
+      "name": "UI (Blazor WASM)",
+      "type": "dotnet",
+      "request": "launch",
+      "projectPath": "${workspaceFolder}/src/Fido2CustomAuth.Ui/Fido2CustomAuth.Ui.csproj"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Frontend + Backend",
+      "configurations": [
+        "API (.NET)",
+        "UI (Blazor WASM)"
+      ],
+      "stopAll": true
+    }
+  ]
+}
